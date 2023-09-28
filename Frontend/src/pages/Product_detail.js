@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Footer from '../layouts/Footer'
+
 const Product_detail = () => (
     <>
         {/* <!-- Page Preloder --> */}
@@ -530,7 +530,7 @@ const Product_detail = () => (
         </div>
     </section>
     {/* <!-- Related Section End --> */}
-<Footer/>
+
     </>
 );
 export default Product_detail;
