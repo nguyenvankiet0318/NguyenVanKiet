@@ -1,15 +1,20 @@
-import "./assets/sass/app.scss";  
-
+import Header from "./layouts/Header";
+// import "./assets/sass/style.scss"
+// import "./assets/sass/app.scss"
+import Home from "./layouts/Home";
+import { BrowserRouter, Link } from "react-router-dom";
+import Slider from "./pages/Slider";
 import Footer from "./layouts/Footer";
-import Header from './layouts/Header'
-import Main from "./layouts/Main";
+
 function App() {
   return (
-    <>
+    <BrowserRouter>
+    <div className="App">
       <Header/>
-      <Main/>
+      <Home/>
       <Footer/>
-      </>
+    </div>
+  </BrowserRouter>
   );
 }
 
