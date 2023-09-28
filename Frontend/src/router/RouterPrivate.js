@@ -1,6 +1,7 @@
 import BrandCreate from "../page/Backend/Brand/BrandCreate";
 import BrandShow from "../page/Backend/Brand/BrandShow";
-import BrandList from "../page/Backend/Brand/Brandlist";
+
+import BrandList from "../pages/Backend/Brand/Brandlist";
 import Brandupdate from "../page/Backend/Brand/Brandupdate";
 import CategoryCreate from "../page/Backend/Category/CategoryCreate";
 import CategoryShow from "../page/Backend/Category/CategoryShow";

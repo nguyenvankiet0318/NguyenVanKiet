@@ -1,19 +1,31 @@
-import Header from "./layouts/Header";
+
 // import "./assets/sass/style.scss"
 // import "./assets/sass/app.scss"
-import Home from "./layouts/Home";
-import { BrowserRouter, Link } from "react-router-dom";
-import Slider from "./pages/Slider";
-import Footer from "./layouts/Footer";
+
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import LayoutSite from "./layouts/LayoutSite"
+
+import LayoutAdmin from "./layouts/LayoutAdmin";
+import RouterSite from "./router";
+
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-      <Header/>
-      <Home/>
-      <Footer/>
-    </div>
+    <Routes>
+      <Route path="/" element={<LayoutSite />}> 
+        {RouterSite.RouterPublic.map(function(route,index){
+          const Page = route.component;
+          return <Route key={index} path={route.path} element={<Page/>} />
+        })}
+      </Route>
+      <Route path="/" element={<LayoutAdmin />}> 
+        {RouterSite.RouterPrivate.map(function(route,index){
+          const Page = route.component;
+          return <Route key={index} path={route.path} element={<Page/>} />
+        })}
+      </Route>
+    </Routes>
   </BrowserRouter>
   );
 }
