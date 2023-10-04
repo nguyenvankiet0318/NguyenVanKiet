@@ -10,6 +10,7 @@ Email: nguyenvankiet12a7.2003@gmail.com
 +ReactJS
 +Laravel
 ## Thời hạn deadline:
-Từ ngày 7/9 -> 14/9 : chọn đề tài, tìm template frontend, hi?n lên dc template frontend
-Từ ngày 14/9 -> 21/9 :  sửa lỗi, làm router cho frontend
-Từ ngày 21/9 -> 28/9 :  làm trang quản trị giao diện và tính năng (backend)
+Từ ngày 7/9 -> 14/9 : chọn đề tài, tìm template frontend, hiện lên dc template frontend.
+Từ ngày 14/9 -> 21/9 :  sửa lỗi, làm router cho frontend.
+Từ ngày 21/9 -> 28/9 :  làm trang quản trị giao diện và tính năng (backend).
+Từ ngày 28/9 -> 5/9 :  hoàn thành các bản quản trị backend.
