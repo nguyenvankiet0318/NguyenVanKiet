@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import { FaPlus, FaTrash } from 'react-icons/fa';
 import { FaEye,FaEdit } from 'react-icons/fa';
 import { useEffect, useState } from "react";
-import { urlImage } from "../../config";
-import categorysevice from "../../services/CategoryServices";
+import { urlImage } from "../../../config";
+import categorysevice from "../../../services/CategoryServices";
 function Categorylist() {
+    const [statusdel, setStatusDelete]=useState(0);
+
    const [categorys,setCategorys]= useState([]);
    useEffect(function(){
         (async function(){
@@ -13,6 +15,13 @@ function Categorylist() {
             });     
         })();
    },[])
+   function categoryDelete(id)
+   {
+    categorysevice.remove(id).then(function (result) {
+           alert(result.data.message);
+           setStatusDelete(result.data.id);
+       });
+   }
     return (
         <div className="card">
             <div className="card-header">
@@ -69,7 +78,7 @@ function Categorylist() {
                                     <Link className="btn btn-sm btn-primary me-1" to={"/admin/category/update/"+category.id}>
                                         <FaEdit />
                                     </Link>
-                                    <button className="btn btn-sm btn-danger ">
+                                    <button onClick={()=>categoryDelete(category.id)} className="btn btn-sm btn-danger ">
                                         <FaTrash />
                                     </button>
                                 </td>

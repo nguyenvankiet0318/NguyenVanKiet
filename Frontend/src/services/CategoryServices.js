@@ -16,9 +16,9 @@ function update(category,id)
 {
     return httpAxios.post('category/update/'+id,category);
 }
-function remove(id)
-{
-    return httpAxios.get('category/remove/'+id);
+function remove(id){
+    return httpAxios.delete('category/destroy/'+id);
+
 }
 function getCategoryByParentId(parent_id){
     return httpAxios.get('category_list/'+parent_id);

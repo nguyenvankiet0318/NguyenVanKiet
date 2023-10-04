@@ -1,36 +1,43 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaEdit, FaTrash } from "react-icons/fa";
-import categoryservice from "../../services/CategoryServices";
+import menuservice from "../../../services/MenuServices";
 import { useEffect, useState } from "react";
-import { urlImage } from "../../config";
-function CategoryShow() {
+function MenuShow() {
+  const navigate = useNavigate();
   const { id } = useParams("id");
-  const [category, setCategory] = useState([]);
+  const [menu, setMenu] = useState([]);
   useEffect(function () {
     (async function () {
-      await categoryservice.getById(id).then(function (result) {
-        setCategory(result.data.data)
+      await menuservice.getById(id).then(function (result) {
+        setMenu(result.data.data)
       });
     })();
   }, [])
+  function menuDelete(id)
+    {
+        menuservice.remove(id).then(function (result) {
+            alert(result.data.message);
+            navigate('/admin/menu/', { replace: true });
+        });
+    }
   return (
     <div classNmae="card">
       <div className="card-header">
         <div className="row">
           <div className="col-md-6">
-            <strong className="text-danger">Thêm danh mục</strong>
+            <strong className="text-danger">Chi tiết menu</strong>
           </div>
           <div className="col-md-6 text-end">
-            <Link to="/admin/category" className="btn btn-sm btn-info me-2">
+            <Link to="/admin/menu" className="btn btn-sm btn-info me-2">
               Về danh sách
             </Link>
             <Link
               className="btn btn-sm btn-primary me-1"
-              to={"/admin/category/update/" + category.id}
+              to={"/admin/menu/update/" + menu.id}
             >
               Sửa <FaEdit />
             </Link>
-            <button className="btn btn-sm btn-danger">
+            <button onClick={()=>menuDelete(menu.id)} className="btn btn-sm btn-danger">
               Xóa <FaTrash />
             </button>
           </div>
@@ -47,21 +54,19 @@ function CategoryShow() {
           <tbody>
             <tr>
               <th>Id</th>
-              <td>{category.id}</td>
+              <td>{menu.id}</td>
             </tr>
             <tr>
               <th>Tên danh mục</th>
-              <td>{category.name}</td>
+              <td>{menu.name}</td>
             </tr>
             <tr>
-              <th>Slug</th>
-              <td>{category.slug}</td>
+              <th>link</th>
+              <td>{menu.link}</td>
             </tr>
             <tr>
-              <th>Hình</th>
-              <td>
-                <img src={urlImage+"category/"+category.image} alt="hinh" className="img-fluid" style={{maxWidth:200}}/>
-              </td>
+              <th>Vị trí</th>
+              <td>{menu.position}</td>
             </tr>
           </tbody>
         </table>
@@ -70,4 +75,4 @@ function CategoryShow() {
   );
 }
 
-export default CategoryShow;
+export default MenuShow;

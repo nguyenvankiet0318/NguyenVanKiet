@@ -1,9 +1,10 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import brandservice from "../../../services/BrandServices";
 import { useEffect, useState } from "react";
 import { urlImage } from "../../../config";
 function BrandShow() {
+  const navigate = useNavigate();
   const { id } = useParams("id");
   const [brand, setBrand] = useState([]);
   useEffect(function () {
@@ -13,6 +14,13 @@ function BrandShow() {
       });
     })();
   }, [])
+  function brandDelete(id)
+    {
+      brandservice.remove(id).then(function (result) {
+            alert(result.data.message);
+            navigate('/admin/brand/', { replace: true });
+        });
+    }
   return (
     <div classNmae="card">
       <div className="card-header">

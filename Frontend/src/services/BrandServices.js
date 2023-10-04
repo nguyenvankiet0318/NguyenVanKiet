@@ -16,7 +16,7 @@ function update(brand,id){
 
 }
 function remove(id){
-    return httpAxios.delete('brand/remove/'+id);
+    return httpAxios.delete('brand/destroy/'+id);
 
 }
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import categoryservice from "../../services/CategoryServices";
-import { urlImage } from "../../config";
+import categoryservice from "../../../services/CategoryServices";
+import { urlImage } from "../../../config";
 
 function Categoryupdate() {
     const navigate = useNavigate();

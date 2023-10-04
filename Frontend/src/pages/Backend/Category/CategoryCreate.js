@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import categoryservice from "../../services/CategoryServices";
+import categoryservice from "../../../services/CategoryServices";
 
+import { urlImage } from "../../../config";
 
 function CategoryCreate() {
   const [categorys, setCategory] = useState([]);
