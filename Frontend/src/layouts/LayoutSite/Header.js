@@ -36,14 +36,14 @@ function Header() {
             <div className="row">
                 <div className="col-lg-3 col-md-3">
                     <div className="header__logo">
-                        <a href="./index.html"><img src="../assets/img/logo.png" alt=""/></a>
+                        <a href="./"><img src="../assets/img/logo.png" alt=""/></a>
                     </div>
                 </div>
                 <div className="col-lg-6 col-md-6">
                     <nav className="header__menu mobile-menu">
                         <ul>
-                            <li className="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./shop.html">Shop</a></li>
+                            <li className="active"><a href="./">Home</a></li>
+                            <li><a href="./shop">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul className="dropdown">
                                     <li><a href="./about.html">About Us</a></li>
