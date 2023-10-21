@@ -12,7 +12,7 @@ function UserCreate() {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [username, setUserName] = useState('');
-    const [password, setPassword] = useState('');
+    const [password, setPassworda] = useState('');
     const [roles, setRoles] = useState('');
     const [address, setAddress] = useState('');
     const [status, setStatus] = useState(1);
@@ -75,7 +75,7 @@ function UserCreate() {
                             </div> 
                             <div className="md-3">
                                 <label htmlFor="password">Password</label>
-                                <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" value={password} className="form-control" />
+                                <input onChange={(e) => setPassworda(e.target.value)} type="password" name="password" value={password} className="form-control" />
                             </div>
                             <div className="md-3">
                                 <label htmlFor="password">Địa chỉ</label>

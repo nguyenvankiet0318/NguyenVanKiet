@@ -11,7 +11,7 @@ function UserUpdate() {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [username, setUserName] = useState('');
-    const [password, setPassword] = useState('');
+    const [password, setPassworda] = useState('');
     const [roles, setRoles] = useState('');
     const [address, setAddress] = useState('');
     const [status, setStatus] = useState(1);
@@ -26,7 +26,7 @@ function UserUpdate() {
                 setEmail(data.email);
                 setPhone(data.phone);
                 setUserName(data.username);
-                setPassword(data.password);
+                setPassworda(data.password);
                 setRoles(data.roles);
                 setAddress(data.address);
                 setStatus(data.status);
@@ -98,7 +98,7 @@ function UserUpdate() {
                             </div>
                             <div className="md-3">
                                 <label htmlFor="password">Password</label>
-                                <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" value={password} className="form-control" />
+                                <input onChange={(e) => setPassworda(e.target.value)} type="password" name="password" value={password} className="form-control" />
                             </div>
                             <div className="md-3">
                                 <label htmlFor="password">Địa chỉ</label>

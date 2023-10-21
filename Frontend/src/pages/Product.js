@@ -1,6 +1,17 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-const Product = () => (
+import productservice from "../services/ProductServices"
+function Product() {
+    const [limit, setLimit] = useState(8);
+    const [products, setProducts] = useState([]);
+    useEffect(function () {
+       (async function () {
+          await productservice.getProductAll(limit).then(function (result) {
+             setProducts(result.data.products)
+          });
+       })();
+    }, [limit])
+    return(
 // <!-- Product Section Begin -->
     <section className="product spad">
         <div className="container">
@@ -294,4 +305,5 @@ const Product = () => (
     </section>
     // {/* <!-- Product Section End --> */}
 );
+}
 export default Product;

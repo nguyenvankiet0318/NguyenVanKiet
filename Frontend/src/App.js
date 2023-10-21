@@ -6,7 +6,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import LayoutSite from "./layouts/LayoutSite"
 import LayoutAdmin from "./layouts/LayoutAdmin";
 import RouterSite from "./router";
-
+import Login from "./layouts/LayoutAdmin/Login/Login";
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
           return <Route key={index} path={route.path} element={<Page/>} />
         })}
       </Route>
+      <Route path="login" element={<Login />}/> 
     </Routes>
   </BrowserRouter>
   );

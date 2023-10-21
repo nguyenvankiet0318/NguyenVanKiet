@@ -13,4 +13,6 @@ Email: nguyenvankiet12a7.2003@gmail.com
 Từ ngày 7/9 -> 14/9 : chọn đề tài, tìm template frontend, hiện lên dc template frontend.
 Từ ngày 14/9 -> 21/9 :  sửa lỗi, làm router cho frontend.
 Từ ngày 21/9 -> 28/9 :  làm trang quản trị giao diện và tính năng (backend).
-Từ ngày 28/9 -> 5/9 :  hoàn thành các bản quản trị backend.
+Từ ngày 28/9 -> 5/10 :  hoàn thành các bảng quản trị backend.
+Từ ngày 5/10 -> 12/10 :  làm login, register trang quản trị.
+Từ ngày 12/10 -> 19/10 :  Thực hiện trang tất cả sản phẩm.
