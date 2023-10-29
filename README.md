@@ -16,3 +16,4 @@ Từ ngày 21/9 -> 28/9 :  làm trang quản trị giao diện và tính năng (
 Từ ngày 28/9 -> 5/10 :  hoàn thành các bảng quản trị backend.
 Từ ngày 5/10 -> 12/10 :  làm login, register trang quản trị.
 Từ ngày 12/10 -> 19/10 :  Thực hiện trang tất cả sản phẩm.
+Từ ngày 19/10 -> 26/10 :  Thực hiện trang contact.
