@@ -3849,3 +3849,78 @@ ol {
 		height: 250px;
 	}
 }
+.sidebar {
+	background-color: #427bb4;
+	padding: 20px;
+  }
+  
+  .navbar {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+  }
+  
+  .navbar-brand {
+	margin-bottom: 30px;
+  }
+  
+  .navbar-brand h3 {
+	color: #fff;
+  }
+  
+  .user-profile {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .user-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+  }
+  
+  .user-info {
+	margin-left: 10px;
+  }
+  
+  .user-info h6,
+  .user-info span {
+	color: #fff;
+	margin: 0;
+  }
+  
+  .navbar-nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .nav-item {
+	margin-bottom: 10px;
+  }
+  
+  .nav-item a {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	text-decoration: none;
+  }
+  
+  .nav-item a i {
+	margin-right: 10px;
+  }
+  
+  .dropdown-menu {
+	background-color: #343a40;
+	border: none;
+  }
+  
+  .dropdown-item {
+	color: #fff !important;
+	text-decoration: none !important;
+  }
+  
+  .dropdown-item:hover {
+	background-color: #495057;
+  }

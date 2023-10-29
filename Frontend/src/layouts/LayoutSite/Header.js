@@ -18,6 +18,7 @@ function Header() {
                             <div className="header__top__links">
                                 <a href="#">Sign in</a>
                                 <a href="#">FAQs</a>
+                                <a href="/login">Quản trị</a>
                             </div>
                             <div className="header__top__hover">
                                 <span>Usd <i className="arrow_carrot-down"></i></span>

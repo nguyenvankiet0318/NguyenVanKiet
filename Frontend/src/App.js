@@ -7,6 +7,7 @@ import LayoutSite from "./layouts/LayoutSite"
 import LayoutAdmin from "./layouts/LayoutAdmin";
 import RouterSite from "./router";
 import Login from "./layouts/LayoutAdmin/Login/Login";
+import Register from "./layouts/LayoutAdmin/Login/Register";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
         })}
       </Route>
       <Route path="login" element={<Login />}/> 
+      <Route path="register" element={<Register />}/> 
+
     </Routes>
   </BrowserRouter>
   );

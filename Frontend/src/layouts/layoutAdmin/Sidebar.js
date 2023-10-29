@@ -40,8 +40,8 @@ function Sidebar() {
                     <div className="nav-item dropdown">
                         <Link to="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i className="far fa-file-alt me-2"></i>Pages</Link>
                         <div className="dropdown-menu bg-transparent border-0">
-                            <Link to="signin.html" className="dropdown-item">Sign In</Link>
-                            <Link to="signup.html" className="dropdown-item">Sign Up</Link>
+                            <Link to="/login" className="dropdown-item">Sign In</Link>
+                            <Link to="/register" className="dropdown-item">Sign Up</Link>
                             <Link to="404.html" className="dropdown-item">404 Error</Link>
                             <Link to="blank.html" className="dropdown-item">Blank Page</Link>
                         </div>
